@@ -1,0 +1,27 @@
+--- SQL FOR PENDAFTARAN FILE ---
+CREATE DATABASE IF NOT EXISTS db_pendaftaran;
+
+USE db_pendaftaran;
+
+CREATE TABLE IF NOT EXISTS mahasiswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    telepon VARCHAR(15) NOT NULL,
+    jenis_kelamin ENUM('Laki-laki', 'Perempuan') NOT NULL,
+    jurusan ENUM('Teknik Informatika', 'Sistem Informasi', 'Manajemen', 'Akuntansi') NOT NULL,
+    alamat TEXT NOT NULL,
+    asal_sekolah VARCHAR(100) NOT NULL
+);
+
+
+--- SQL FOR BIODATA FILE ---
+CREATE DATABASE IF NOT EXISTS db_biodata;
+
+USE db_biodata;
+
+CREATE TABLE IF NOT EXISTS biodata (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    alamat TEXT NOT NULL,
+    usia INT NOT NULL
+);
